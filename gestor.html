@@ -15,6 +15,25 @@
             text-align: center;
             font-size: 12px;
         }
+        a{
+            font-size: 12px;
+            margin : 5px;
+        }
+        .row{
+            text-align: center;
+        }
+        button{
+            margin : 0px;
+        }
+        .but_sem_pad{
+            padding: 0px;
+            border:  0px;
+            text-align: center;
+        }
+        .row_sem_marg{
+            margin: 0px;
+        }
+
     </style>
 </head>
 <body onload="exibirUsuario()">
@@ -43,11 +62,13 @@
                 <div class="row">
                     <div class="col-8">
                         <select class="custom-select" name="statusid" id="combo_status">
-                            <option value="todas">Todas</option>
+                            
                             <option value="inicial">Inicial</option>
                             <option value="aprovada">Aprovada</option>
                             <option value="negada">Negada</option>
                             <option value="cancelada">Cancelada</option>
+                            <option value="todas">Todas</option>
+
                         </select> 
                     </div>
 
@@ -63,6 +84,14 @@
 
         </div>
 
+        <br>
+
+        <div class="row">
+            <div class="col-12">
+            <button type="button" class="btn btn-success"></button><a>aprovar </a><button type="button" class="btn btn-warning"></button><a>negar </a><button type="button" class="btn btn-danger"></button><a>cancelar </a>
+            </div>
+        </div>
+        
         <br>
 
         <div class="row">

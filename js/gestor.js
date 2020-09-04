@@ -36,7 +36,7 @@ function preencherTabela(lista){
         "<td>" + lista[cont].pdv.nome + "</td>" +
         "<td>" + lista[cont].data + " " + lista[cont].hora + "</td>" +
         "<td>" + lista[cont].status + "</td>" +
-        "<td>" + "<button type='button' class='btn btn-success' onclick='aprovarSolicitacao(" + lista[cont].num_seq + ")'></button><button type='button' class='btn btn-warning' onclick='negarSolicitacao(" + lista[cont].num_seq + ")'></button><button type='button' class='btn btn-danger' onclick='cancelarSolicitacao(" + lista[cont].num_seq + ")'></button>" + "</td>" +
+        "<td>" + "<div class='row row_sem_marg'><div class='col-12 col-lg-4 but_sem_pad'><button type='button' class='btn btn-success' onclick='aprovarSolicitacao(" + lista[cont].num_seq + ")'></button></div><div class='col-12 col-lg-4 but_sem_pad'><button type='button' class='btn btn-warning' onclick='negarSolicitacao(" + lista[cont].num_seq + ")'></button></div><div class='col-12 col-lg-4 but_sem_pad'><button type='button' class='btn btn-danger' onclick='cancelarSolicitacao(" + lista[cont].num_seq + ")'></button></div></div>" + "</td>" +
         "</tr>";
     }
 
@@ -45,7 +45,7 @@ function preencherTabela(lista){
 }
 
 function carregarSolicitacoesLoad(){
-    fetch("http://localhost:8080/solicitacoes")
+    fetch("http://localhost:8080/solicitacao/inicial")
     .then(res => res.json())
     .then(res => preencherTabela(res));
 }

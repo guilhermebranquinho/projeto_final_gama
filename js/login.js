@@ -18,7 +18,7 @@ function logar(){
         window.location = "gestor.html";
     })
     .catch(err => {
-        window.alert("Deu ruim");
+        window.alert("Não autorizado");
     });
 }
 

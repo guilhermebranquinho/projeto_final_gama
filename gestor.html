@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo_aba">Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script type="text/javascript" src="js/gestor.js"></script>
+    <style>
+        th{
+            text-align: center;
+            font-size: 14px;
+        }
+        td{
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body onload="exibirUsuario()">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-md-1" id="foto">
+
+            </div>
+            <div class="col-7 col-md-8" id="dados">
+
+
+            </div>
+            <div class="col-3 col-md-3">
+                <input type="button" class="btn btn-primary" onclick="logout()" value="Logout" style="height:50px !important; width:100% !important;">
+            </div>
+        </div>
+        
+        <br>
+
+        <div class="row">
+
+            <div class="col-1"></div>
+
+            <fieldset class="col-10" style="border: 1px black solid;">
+                <legend style="width: 70px;">Status</legend>
+                <div class="row">
+                    <div class="col-8">
+                        <select class="custom-select" name="statusid" id="combo_status">
+                            <option value="todas">Todas</option>
+                            <option value="inicial">Inicial</option>
+                            <option value="aprovada">Aprovada</option>
+                            <option value="negada">Negada</option>
+                            <option value="cancelada">Cancelada</option>
+                        </select> 
+                    </div>
+
+                    <div class="col-4">
+                        <input type="button" class="btn btn-primary" onclick="carregarSolicitacoes()" value="Filtrar" style="width:100% !important;">
+                    </div>
+                </div>
+                <br>
+
+            </fieldset>
+
+            <div class="col-1"></div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" id="tabela_solicitacao"></div>
+            <div class="col-1"></div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
